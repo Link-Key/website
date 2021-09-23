@@ -35,30 +35,30 @@ function Head(): ReactElement {
   return (
     <HTMLHead>
       {/* Primary Meta Tags */}
-      <title>Loot</title>
-      <meta name="title" content="Loot" />
+      <title>LinkKey</title>
+      <meta name="title" content="LinkKey" />
       <meta
         name="description"
-        content="Loot is randomized adventurer gear generated and stored on chain."
+        content="LinkKey is randomized adventurer gear generated and stored on chain."
       />
 
       {/* OG + Faceook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.lootproject.com/" />
-      <meta property="og:title" content="Loot" />
+      <meta property="og:title" content="LinkKey" />
       <meta
         property="og:description"
-        content="Loot is randomized adventurer gear generated and stored on chain."
+        content="LinkKey is randomized adventurer gear generated and stored on chain."
       />
       <meta property="og:image" content="https://lootproject.com/meta.png" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://www.lootproject.com/" />
-      <meta property="twitter:title" content="Loot" />
+      <meta property="twitter:title" content="LinkKey" />
       <meta
         property="twitter:description"
-        content="Loot is randomized adventurer gear generated and stored on chain."
+        content="LinkKey is randomized adventurer gear generated and stored on chain."
       />
       <meta property="twitter:image" content="https://lootproject.com/meta.png" />
 
@@ -96,7 +96,7 @@ function Header() {
       {/* Main logo */}
       <div className={styles.header__logo}>
         <Link href="/">
-          <a>Loot</a>
+          <a>LinkKey</a>
         </Link>
       </div>
 
