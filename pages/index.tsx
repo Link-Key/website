@@ -1,7 +1,7 @@
 // Imports
 import Link from "next/link"; // Local routing
 import Layout from "@components/Layout"; // Layout wrapper
-import {defaultBags} from "@utils/constants"; // Bags to render
+import {defaultBags, defaultEncipherer} from "@utils/constants"; // Bags to render
 import styles from "@styles/pages/Home.module.scss"; // Styles
 
 // Types
@@ -37,6 +37,14 @@ export default function Home(): ReactElement {
     const getRandomThreeBags = () => {
         const shuffled = defaultBags.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, 3);
+    };
+
+    /**
+     * Get top 1000 cryptographers
+     */
+    const getTop1000Cryptographers = () => {
+        const shuffled = defaultEncipherer.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 30);
     };
 
     return (
@@ -76,7 +84,7 @@ export default function Home(): ReactElement {
                     </p>
                 </div>
 
-                {/* Rendering sample loot bags */}
+                {/* Rendering sample linkkey bags */}
                 <div className={styles.home__feature}>
                     <span>Example Bags:</span>
                     {getRandomThreeBags().map(({id, attributes}, i) => (
@@ -97,6 +105,32 @@ export default function Home(): ReactElement {
                                         </li>
                                     ))}
                                 </ul>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+
+                {/* Rendering sample loot bags */}
+                <div className={styles.home__feature}>
+                    <span>Top 1000 cryptographers:</span>
+                    {getTop1000Cryptographers().map(({id, attributes}, i) => (
+                        // For each loot bag, render item and link to OpenSea
+                        <a
+                            href= {`${linkKeyOpenSeaLink}${id}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            key={i}
+                            className={styles.home__bag_2}
+                        >
+                            <div className={styles.home__bag_attributes_2}>
+                                <span>#{id}</span>
+                                {/*<ul>*/}
+                                {/*    {attributes.map((attribute, i) => (*/}
+                                {/*        <li key={i}>*/}
+                                {/*            <span>{attribute}</span>*/}
+                                {/*        </li>*/}
+                                {/*    ))}*/}
+                                {/*</ul>*/}
                             </div>
                         </a>
                     ))}
