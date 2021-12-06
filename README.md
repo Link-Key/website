@@ -1,6 +1,6 @@
-# Loot
+# Linkkey
 
-Community-operated [website](https://www.lootproject.com/) for the Loot project.
+Community-operated [website](https://linkkey.com/) for the linkkey project.
 
 ## Contribute
 
